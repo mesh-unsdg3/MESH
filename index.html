@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Equality and Support Hub</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            scroll-behavior: smooth; 
+        }
+    
+        header {
+            background-color: #b9d7ef;
+            color: #000000;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        .logo {
+            margin-right: 20px;
+        }
+    
+        .logo img {
+            height: 40px;
+        }
+    
+        .team-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 0;
+        }
+    
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+    
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+    
+        nav ul li {
+            margin: 0 15px;
+        }
+    
+/* Base styles for navigation links */
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            position: relative;
+            padding: 10px 15px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 123, 255, 0.15);
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 0;
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover::before {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+        }
+        
+        nav ul li a:hover {
+            color: #545555e1;
+            transform: translateY(-2px);
+        }
+
+        .sign-in {
+            margin-left: 20px;
+        }
+    
+        .sign-in button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        .hero {
+            background-color: #e9ecef;
+            padding: 60px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .hero h1 {
+            font-size: 2.2em;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    
+        .call-ambulance-button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+    
+        .medical-options {
+            padding: 30px 20px;
+        }
+    
+        .medical-options h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+    
+        .option-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    
+        .option-card h3 {
+            color: #007bff;
+            margin-top: 0;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+    
+        .option-card p {
+            color: #555;
+            font-size: 0.9em;
+        }
+    
+        .option-card button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+    
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 35px 20px;
+            text-align: right;
+        }
+    
+        .ai-help-button {
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+            z-index: 100;
+            background-color: #ffc107; 
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    
+    
+        .book-appointment-button {
+            position: fixed;
+            bottom: 10px;
+            left: 20px;
+            z-index: 100;
+            background-color: #ffc107;
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    
+        /* New styles for sections and contact form */
+        .content-section {
+            padding: 40px 20px;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        .content-section h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+        }
+    
+        .contact-form label {
+            font-weight: bold;
+            color: #555;
+        }
+    
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+    
+        .contact-form textarea {
+            resize: vertical;
+        }
+    
+        .contact-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1em;
+        }
+    
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+    
+        /* Placeholder for icons */
+        .option-card::before {
+            content: "⚕";
+            font-size: 2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+    
+        .option-card:nth-child(2)::before { content: "🤰"; }
+        .option-card:nth-child(3)::before { content: "👴"; }
+        .option-card:nth-child(4)::before { content: "🩹"; }
+
+        .option-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .option-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        
+        .btn:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+    
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+    
+            .logo {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+    
+            .team-name {
+                margin-bottom: 10px;
+            }
+    
+            nav {
+                flex-grow: 0;
+            }
+    
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            nav ul li {
+                margin: 8px 0;
+            }
+    
+            .sign-in {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+    
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+    
+            .ai-help-button {
+                position: fixed;
+                bottom: 10px;
+                right: 20px;
+                z-index: 100;
+                background-color: #ffc107;
+                color: #333;
+                border: none;
+                padding: 15px 30px;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 1.1em;
+                font-weight: bold;
+                text-decoration: none;
+            }
+    
+            .book-appointment-button {
+                position: fixed;
+                bottom: 10px;
+                left: 20px;
+                z-index: 100;
+                background-color: #ffc107;
+                color: #333;
+                border: none;
+                padding: 15px 30px;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 1.1em;
+                font-weight: bold;
+                text-decoration: none;
+            }
+    
+            footer {
+                text-align: center;
+            }
+    
+            .content-section {
+                padding: 30px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <div class="team-name">Medical Equality and Support Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="our_services.html">Our Services</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="sign-in">
+            <a href="sign_in.html"><button>Sign In</button></a>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero" id="home">
+            <h1>Be It Day or Night - <br> Health Professionals Are Always With You</h1>
+            <a href="tel:102" class="call-ambulance-button">Call Ambulance</a>
+        </section>
+    
+        <section class="medical-options">
+            <h2>How Can We Help?</h2>
+            <div class="options-grid">
+            <div class="option-card">
+                <h3>Child Health Care</h3>
+                <p>Information and resources for child health emergencies.</p>
+                <a href="child_health_care.html" class="btn">Get Help</a>
+            </div>
+            <div class="option-card">
+                <h3>Maternity Care</h3>
+                <p>Emergency assistance and information for pregnant individuals.</p>
+                <a href="maternity_care.html" class="btn">Get Help</a>
+            </div>
+            <div class="option-card">
+                <h3>Old Age Health</h3>
+                <p>Support and resources for health emergencies in older adults.</p>
+                <a href="old_age_health.html" class="btn">Get Help</a>
+            </div>
+            <div class="option-card">
+                <h3>General First AID</h3>
+                <p>Essential first aid knowledge for various situations.</p>
+                <a href="general_first_aid.html" class="btn">Get Help</a>
+            </div>
+            </div>            
+        </section>
+    </main>
+    <footer>
+        <a href="book_appointment.html" class="book-appointment-button">Book Appointment</a>
+        <button class="ai-help-button" onclick="window.location.href='chatbot.html'">AI Help</button>
+    </footer>
+
+    
+    <script>
+        function openAiHelp() {
+            alert("AI Help feature will be implemented here.");
+            // In a real implementation, this function would open an AI chatbot interface.
+        }
+    
+        function showAlert(serviceName) {
+            alert(You clicked on: ${serviceName}. Further implementation for this service will be added.);
+            // In a real implementation, this function would redirect to a relevant page or trigger an action.
+        }
+    
+        function callAmbulance() {
+        window.open('tel:108');
+        }
+
+        function goToChildHealthCare() {
+            window.location.href = 'child_health_care.html';
+        }
+    
+        function goToMaternityCare() {
+            window.location.href = 'maternity_care.html';
+        }
+    
+        function goToOldAgeHealth() {
+            window.location.href = 'old_age_health.html';
+        }
+    
+        function goToGeneralFirstAid() {
+            window.location.href = 'general_first_aid.html';
+        }
+    
+        // Basic smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+        const target = this.getAttribute('href');
+
+        // Check if the target is an external page or an anchor link
+        if (target.startsWith('#')) {
+            e.preventDefault(); // Prevent default if it's an anchor link
+            document.querySelector(target).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        // If it's an external link, allow default behavior
+            });
+        });
+
+    </script>

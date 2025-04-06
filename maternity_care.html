@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maternity Care - Medical Equality and Support Hub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0f7fa, #fff3e0);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: #007bff;
+            text-align: center;
+            margin-top: 20px;
+        }
+        header {
+            background-color: #b9d7ef;
+            color: #000000;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        .logo {
+            margin-right: 20px;
+        }
+    
+        .logo img {
+            height: 40px;
+        }
+    
+        .team-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 0;
+        }
+    
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+    
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+    
+        nav ul li {
+            margin: 0 15px;
+        }
+    
+/* Base styles for navigation links */
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            position: relative;
+            padding: 10px 15px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 123, 255, 0.15);
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 0;
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        nav ul li a:hover::before {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+        }
+        
+        nav ul li a:hover {
+            color: #545555e1;
+            transform: translateY(-2px);
+        }
+
+        .sign-in {
+            margin-left: 20px;
+        }
+    
+        .sign-in button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .section {
+            margin: 20px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section img {
+            max-width: 150px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+            flex-grow: 1;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .section li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #007bff;
+        }
+
+        .video-section {
+            margin: 20px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            align-items: center;
+        }
+
+        .video-link {
+            display: inline-block;
+            width: 300px;
+            height: 170px;
+            margin: 10px;
+        }
+
+        .video-link iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .section {
+                padding: 20px;
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .section img {
+                margin: 0 0 10px 0;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <div class="team-name">Medical Equality and Support Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="our_services.html">Our Services</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="sign-in">
+            <button>Sign In</button>
+        </div>
+    </header>
+    <h1>Child Health Care</h1>
+
+    <div class="section">
+        <img src="https://unplannedpregnancy.com/wp-content/uploads/Why-is-Prenatal-Care-Important.jpg">
+        <div>
+            <h2>Prenatal Care: Monitoring Mother and Baby</h2>
+            <p>Regular prenatal checkups are essential for a healthy pregnancy. These visits help monitor the health of both the mother and the developing baby.</p>
+            <ul>
+                <li>Schedule regular appointments with your healthcare provider.</li>
+                <li>Undergo recommended screenings and tests.</li>
+                <li>Discuss any concerns or symptoms with your doctor.</li>
+            </ul>    
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="https://www.haakaa.co.nz/cdn/shop/articles/Pregnancy_Nutrition-ai_500x.jpg?v=1661815222">
+        <div>
+            <h2>Nutrition During Pregnancy: Fueling Healthy Growth</h2>
+            <p>A balanced and nutritious diet is vital during pregnancy to support the baby's growth and the mother's health.</p>
+            <ul>
+                <li>Consume a variety of fruits, vegetables, whole grains, and lean proteins.</li>
+                <li>Ensure adequate intake of folic acid, iron, calcium, and other essential nutrients.</li>
+                <li>Stay hydrated by drinking plenty of water.</li>
+                <li>Limit caffeine, alcohol, and processed foods.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="video-section">
+        <h2>YouTube Video Links on Pregnancy Healthcare</h2>
+        <div class="video-container" style="display: flex; gap: 15px; justify-content: flex-start; overflow-x: auto; padding: 10px 0;">
+
+            <div class="video-link" style="flex: 0 0 auto; width: 280px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kuIkm3Ba6uA?si=eSt6pHJlH2EQW45b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-link" style="flex: 0 0 auto; width: 280px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0d-5zTO2f9A?si=j52e1kCUCtj9igCb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-link" style="flex: 0 0 auto; width: 280px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/idOJhpJTDCo?si=FBUr1UcbI1q1giwO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-link" style="flex: 0 0 auto; width: 280px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QJFmO9W2-wk?si=JETCuZv2iPPjQCrd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-link" style="flex: 0 0 auto; width: 280px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FirRMjYmFTo?si=kcB4cEXXbLxR8Zrj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>    
+    
+</body>

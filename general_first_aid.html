@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General First AID - Medical Equality and Support Hub</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #e0f7fa, #f0f8ff);
+        color: #333;
+        line-height: 1.7;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: rgb(14, 81, 153);
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 600;
+      }
+      header {
+            background-color: #b9d7ef;
+            color: #000000;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        .logo {
+            margin-right: 20px;
+        }
+    
+        .logo img {
+            height: 40px;
+        }
+    
+        .team-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 0;
+        }
+    
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+    
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+    
+        nav ul li {
+            margin: 0 15px;
+        }
+    
+/* Base styles for navigation links */
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            position: relative;
+            padding: 10px 15px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 123, 255, 0.15);
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 0;
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        nav ul li a:hover::before {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+        }
+        
+        nav ul li a:hover {
+            color: #545555e1;
+            transform: translateY(-2px);
+        }
+
+        .sign-in {
+            margin-left: 20px;
+        }
+    
+        .sign-in button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+      .section {
+        margin: 30px auto;
+        padding: 40px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        display: flex;
+        flex-direction: row;
+      }
+      .section img {
+            max-width: 150px;
+            height: 150px;
+            margin-top: 20px;
+            padding-top: 50px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+            flex-grow: 1;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .section li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #007bff;
+        }
+
+      .first-aid-steps {
+        list-style-type: decimal;
+        margin-left: 30px;
+        font-size: 1em;
+      }
+
+      .first-aid-steps li {
+        margin-bottom: 12px;
+      }
+
+      .video-section {
+            margin: 20px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            align-items: center;
+        }
+
+        .video-link {
+            display: inline-block;
+            width: 300px;
+            height: 170px;
+            margin: 10px;
+        }
+
+        .video-link iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+
+     
+
+      @media (max-width: 600px) {
+        .section {
+          padding: 30px;
+        }
+
+        .first-aid-steps {
+          margin-left: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+          <img src="images/logo.png" alt="Logo">
+      </div>
+      <div class="team-name">Medical Equality and Support Hub</div>
+      <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about_us.html">About Us</a></li>
+              <li><a href="our_services.html">Our Services</a></li>
+              <li><a href="contact_us.html">Contact Us</a></li>
+          </ul>
+      </nav>
+      <div class="sign-in">
+          <button>Sign In</button>
+      </div>
+  </header>
+    <h1>General First AID</h1>
+
+    <div class="section">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.UrKr1hcy_guj0bYn5XG21gHaE8&pid=Api&P=0&h=220">
+      <div ><h2>Cuts and Scrapes</h2>
+      <p>Minor cuts and scrapes can usually be treated at home.</p>
+      <ol class="first-aid-steps">
+        <li>Wash your hands thoroughly.</li>
+        <li>Clean the wound with mild soap and water.</li>
+        <li>Apply a thin layer of antibiotic ointment if available.</li>
+        <li>Cover the wound with a clean bandage if necessary.</li>
+        <li>
+          Seek medical attention if the cut is deep, bleeding doesn't stop, or
+          there are signs of infection.
+        </li>
+      </ol></div>
+    </div>
+
+    <div class="section">
+      <img src="https://tse2.mm.bing.net/th?id=OIP.f2uAFQRsoqR5LBPiEOZokwHaEJ&pid=Api&P=0&h=220">
+      <div><h2>Minor Burns</h2>
+      <p>
+        For minor burns (first-degree burns affecting only the outer layer of
+        skin):
+      </p>
+      <ol class="first-aid-steps">
+        <li>
+          Immediately cool the burn with cool (not ice-cold) running water for
+          10-15 minutes.
+        </li>
+        <li>Do not apply ice, butter, or ointments to the burn.</li>
+        <li>Cover the burn loosely with a sterile, nonstick bandage.</li>
+        <li>
+          Seek medical attention for severe burns (second or third degree),
+          burns on the face, hands, feet, or genitals, or if the burn covers a
+          large area.
+        </li>
+      </ol>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="https://tse2.mm.bing.net/th?id=OIP.mEIQzwnjZbxsLpC8rvXxLQHaDL&pid=Api&P=0&h=220">
+      <div><h2>Sprains and Strains</h2>
+      <p>
+        Sprains (ligament injuries) and strains (muscle or tendon injuries) can
+        often be managed with R.I.C.E.
+      </p>
+      <ol class="first-aid-steps">
+        <li><strong>Rest:</strong> Avoid using the injured limb.</li>
+        <li>
+          <strong>Ice:</strong> Apply ice packs for 15-20 minutes at a time,
+          several times a day.
+        </li>
+        <li>
+          <strong>Compression:</strong> Wrap the injured area with a bandage to
+          provide support.
+        </li>
+        <li>
+          <strong>Elevation:</strong> Keep the injured limb raised above your
+          heart if possible.
+        </li>
+        <li>
+          Seek medical attention if the pain is severe, you can't put weight on
+          the limb, or there is significant swelling or bruising.
+        </li>
+      </ol>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="https://tse2.mm.bing.net/th?id=OIP.AZEgWEJeUieF5mS5ccegVAHaFj&pid=Api&P=0&h=220">
+      <div><h2>Nosebleeds</h2>
+      <p>Most nosebleeds are not serious and can be stopped at home.</p>
+      <ol class="first-aid-steps">
+        <li>Sit upright and lean slightly forward.</li>
+        <li>
+          Pinch the soft part of your nose (below the bony bridge) firmly for
+          10-15 minutes.
+        </li>
+        <li>Breathe through your mouth.</li>
+        <li>Do not tilt your head back.</li>
+        <li>
+          If the bleeding doesn't stop after 15 minutes, seek medical attention.
+        </li>
+      </ol>
+      </div>
+    </div>
+
+    <div class="section">
+    <img src="https://i.ytimg.com/vi/QtqLAS5rgGQ/maxresdefault.jpg">
+      <div><h2>Choking (Adult and Older Child)</h2>
+      <p>If someone is choking and cannot cough, speak, or breathe:</p>
+      <ol class="first-aid-steps">
+        <li>Ask "Are you choking? Can you speak?"</li>
+        <li>
+          If they cannot speak, tell someone to call for emergency help
+          immediately.
+        </li>
+        <li>
+          Perform the Heimlich maneuver (abdominal thrusts) until the object is
+          dislodged or the person becomes unconscious. (Note: Learn the proper
+          technique from a certified instructor).
+        </li>
+        <li>
+          If the person becomes unconscious, start CPR if you are trained.
+        </li>
+      </ol>
+      <p>
+        <strong>Disclaimer:</strong> This is a basic overview. Proper training
+        is essential for performing the Heimlich maneuver and CPR effectively.
+      </p>
+      </div>
+    </div>
+
+    <div class="section">
+     <img src="https://iohsa.org/images/performing-cpr.jpg">
+      <div>
+      <h2>CPR (Cardiopulmonary Resuscitation) - Basic Overview</h2>
+      <p>
+        CPR is an emergency procedure for someone whose heart has stopped
+        beating.
+        <strong
+          >This is a very basic overview and does not replace proper CPR
+          training.</strong
+        >
+      </p>
+      <ol class="first-aid-steps">
+        <li>
+          Check for responsiveness and breathing. If the person is not
+          responsive and not breathing or only gasping, call for emergency help
+          immediately.
+        </li>
+        <li>Place the person on their back on a firm surface.</li>
+        <li>
+          Push hard and fast in the center of the chest at a rate of 100-120
+          compressions per minute. Push down about 2 inches for adults.
+        </li>
+        <li>
+          If you are trained in CPR, give rescue breaths after every 30 chest
+          compressions.
+        </li>
+        <li>Continue CPR until emergency help arrives.</li>
+      </ol>
+      <p>
+        <strong>Disclaimer:</strong> Learning CPR from a certified instructor is
+        highly recommended.
+      </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="https://regencyhealthcare.in/wp-content/uploads/2018/06/What-everyone-should-know-about-head-injuries-1-1200x800.png">
+      <div>
+        <h2>Head Injuries (Minor)</h2>
+      <p>For minor bumps and bruises to the head:</p>
+      <ol class="first-aid-steps">
+        <li>Apply a cold compress to the area to reduce swelling.</li>
+        <li>
+          Watch for signs of more serious injury, such as loss of consciousness,
+          severe headache, vomiting, confusion, or changes in vision or speech.
+        </li>
+        <li>
+          Seek immediate medical attention if any of these danger signs are
+          present.
+        </li>
+      </ol></div>
+    </div>
+
+    <div class="video-section">
+      <h2>Helpful YouTube Videos on First AID Healthcare</h2>
+      <div class="video-container">
+        <div class="video-link">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/3h5wSUrUv2o?si=vdv7VGrABISz81El"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="video-link">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/wh_W39OtLbM?si=jjOGfFr5-s2AJ9-R"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="video-link">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/wRToIQgEvM8?si=B9MqUQcy1gJ1I3wT"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="video-link">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/4RuxNREwTcI?si=cTUK0HnrlMz6szkI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe></div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

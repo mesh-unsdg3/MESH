@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Health Care - Medical Equality and Support Hub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0f7fa, #fff3e0);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: #007bff;
+            text-align: center;
+            margin-top: 20px;
+        }
+        header {
+            background-color: #b9d7ef;
+            color: #000000;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        .logo {
+            margin-right: 20px;
+        }
+    
+        .logo img {
+            height: 40px;
+        }
+    
+        .team-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 0;
+        }
+    
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+    
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+    
+        nav ul li {
+            margin: 0 15px;
+        }
+    
+/* Base styles for navigation links */
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            position: relative;
+            padding: 10px 15px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 123, 255, 0.15);
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 0;
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        nav ul li a:hover::before {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+        }
+        
+        nav ul li a:hover {
+            color: #545555e1;
+            transform: translateY(-2px);
+        }
+
+        .sign-in {
+            margin-left: 20px;
+        }
+    
+        .sign-in button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .section {
+            margin: 20px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section img {
+            max-width: 150px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+            flex-grow: 1;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .section li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #007bff;
+        }
+
+        .video-section {
+            margin: 20px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            align-items: center;
+        }
+
+        .video-link {
+            display: inline-block;
+            width: 300px;
+            height: 170px;
+            margin: 10px;
+        }
+
+        .video-link iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 600px) {
+            .section {
+                padding: 20px;
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .section img {
+                margin: 0 0 10px 0;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <div class="team-name">Medical Equality and Support Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="our_services.html">Our Services</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="sign-in">
+            <button>Sign In</button>
+        </div>
+    </header>
+    <h1>Child Health Care</h1>
+
+    <div class="section">
+        <img src="https://cdn.squats.in/kc_articles/165709698500771bcfaabe69696ad.png" alt="Nutrition">
+        <div>
+            <h2>Nutrition for Healthy Growth</h2>
+            <p>Proper nutrition is crucial for a child's growth and development. This includes a balanced diet rich in fruits, vegetables, whole grains, lean proteins, and dairy products. Ensure your child gets enough calories and essential nutrients like vitamins and minerals.</p>
+            <ul>
+                <li>Encourage breastfeeding for the first 6 months of life.</li>
+                <li>Introduce solid foods gradually, starting around 6 months.</li>
+                <li>Offer a variety of foods from all food groups.</li>
+                <li>Limit sugary drinks, processed foods, and excessive unhealthy fats.</li>
+                <li>Ensure adequate hydration with water.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="https://cdn.vectorstock.com/i/1000x1000/12/47/vaccination-child-cartoon-vector-15361247.jpg" alt="Immunization">
+        <div>
+            <h2>Immunization: Protecting Against Diseases</h2>
+            <p>Vaccination is one of the most effective ways to protect children from serious infectious diseases. Follow the recommended immunization schedule provided by your healthcare provider.</p>
+            <ul>
+                <li>Keep track of your child's vaccination records.</li>
+                <li>Consult your doctor about any concerns or questions regarding vaccines.</li>
+                <li>Ensure timely vaccination to provide immunity against preventable diseases.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="https://www.top10homeremedies.com/wp-content/uploads/2016/09/10-good-hygiene-habits-you-should-teach-your-kids-early-feat.jpg" alt="Hygiene">
+        <div>
+            <h2>Hygiene Practices for Children</h2>
+            <p>Teaching children good hygiene habits is essential for preventing the spread of germs and illnesses.</p>
+            <ul>
+                <li>Encourage frequent handwashing with soap and water, especially before meals and after using the toilet.</li>
+                <li>Teach them to cover their mouth and nose when coughing or sneezing.</li>
+                <li>Ensure regular bathing and nail trimming.</li>
+                <li>Maintain a clean environment at home.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="https://rich.telangana.gov.in/assets/inner-img/blogs/Improving-Maternal-and-Child-Health-Forging-a-Brighter-Future-001.jpg" alt="Safety">
+        <div>
+            <h2>Safety Measures for Children</h2>
+            <p>Creating a safe environment for children is vital to prevent accidents and injuries.</p>
+            <ul>
+                <li>Childproof your home by securing hazardous materials and sharp objects.</li>
+                <li>Always supervise young children, especially near water or during play.</li>
+                <li>Use appropriate car seats and booster seats.</li>
+                <li>Teach children about basic safety rules.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="https://cdn.cdnparenting.com/articles/2018/04/629132561-H.jpg" alt="Development">
+        <div>
+            <h2>Monitoring Developmental Milestones</h2>
+            <p>Tracking your child's developmental milestones (physical, cognitive, social, and emotional) can help identify any potential delays early on.</p>
+            <ul>
+                <li>Be aware of the typical developmental milestones for different age groups.</li>
+                <li>Consult your pediatrician if you have any concerns about your child's development.</li>
+                <li>Encourage activities that promote learning and development.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.kcEhFL27cZ6caX0CBTHyuwHaF2&pid=Api&P=0&h=220" alt="Mental Health">
+        <div>
+            <h2>Promoting Mental and Emotional Well-being</h2>
+            <p>A child's mental and emotional health is just as important as their physical health. Provide a supportive and loving environment.</p>
+            <ul>
+                <li>Spend quality time with your child.</li>
+                <li>Listen to their feelings and concerns.</li>
+                <li>Encourage open communication.</li>
+                <li>Seek professional help if your child is struggling with emotional or behavioral issues.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="video-section">
+        <h2>Helpful YouTube Videos on Child Health Care</h2>
+        <div class="video-container" style="display: flex; gap: 15px; justify-content: flex-start; overflow-x: auto; padding: 10px 0;">
+            <div class="video-link" style="flex: 0 0 auto; width: 280px;">
+                <iframe width="100%" height="160" src="https://www.youtube.com/embed/pgNrzpFbCrQ?si=zpLZSjGjP2UgQTXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-link" style="flex: 0 0 auto; width: 280px;">
+                <iframe width="100%" height="160" src="https://www.youtube.com/embed/OelVbC_k-3s?si=fmLZaaqRXdC4mLGf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-link" style="flex: 0 0 auto; width: 280px;">
+                <iframe width="100%" height="160" src="https://www.youtube.com/embed/4kUt3iNMo7g?si=2x9UwtFasycPNNvu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-link" style="flex: 0 0 auto; width: 280px;">
+                <iframe width="100%" height="160" src="https://www.youtube.com/embed/cnlF22uLVDE?si=9OWYALimaNTsZ_o9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>    
+    
+</body>
